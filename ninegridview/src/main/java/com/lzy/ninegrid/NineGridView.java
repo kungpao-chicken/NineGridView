@@ -105,7 +105,7 @@ public class NineGridView extends ViewGroup {
             childrenView.layout(left, top, right, bottom);
             
             if (mImageLoader != null) {
-                mImageLoader.onDisplayImage(getContext(), childrenView, mImageInfo.get(i).thumbnailUrl);
+                mImageLoader.onDisplayImage(getContext(), childrenView, mImageInfo.get(i).thumbnailUrl, mImageInfo.get(i).from);
             }
         }
     }
@@ -228,8 +228,9 @@ public class NineGridView extends ViewGroup {
          * @param context   上下文
          * @param imageView 需要展示图片的ImageView
          * @param url       图片地址
+         * @param from      图片来源 本地或者网络 本地为0
          */
-        void onDisplayImage(Context context, ImageView imageView, String url);
+        void onDisplayImage(Context context, ImageView imageView, String url, int from);
 
         /**
          * @param url 图片的地址

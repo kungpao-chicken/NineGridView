@@ -18,6 +18,14 @@ public class ImageInfo implements Serializable {
     public int imageViewWidth;
     public int imageViewX;
     public int imageViewY;
+    public int from;
+    public int getFrom() {
+        return from;
+    }
+
+    public void setFrom(int from) {
+        this.from = from;
+    }
 
     public String getThumbnailUrl() {
         return thumbnailUrl;
@@ -76,6 +84,7 @@ public class ImageInfo implements Serializable {
                 ", imageViewHeight=" + imageViewHeight +
                 ", bigImageUrl='" + bigImageUrl + '\'' +
                 ", thumbnailUrl='" + thumbnailUrl + '\'' +
+                ", from=" +from +
                 '}';
     }
 }
